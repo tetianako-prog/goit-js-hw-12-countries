@@ -6,4 +6,5 @@ function createCountryMarkup(obj) {
   const markup = countryTemplate(obj);
   refs.country.insertAdjacentHTML('beforeend', markup);
 }
+
 export default createCountryMarkup;

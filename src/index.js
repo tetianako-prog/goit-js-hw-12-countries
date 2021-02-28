@@ -11,7 +11,9 @@ refs.input.addEventListener('input', debounce(inputHandler, 500));
 function inputHandler(e) {
   refs.countryList.innerHTML = '';
   refs.country.innerHTML = '';
+
   if (e.target.value === '') return;
+
   fetchCountries(e.target.value).then(data => {
     if (data.status === 404) {
       errorMessage('Not found :(');
